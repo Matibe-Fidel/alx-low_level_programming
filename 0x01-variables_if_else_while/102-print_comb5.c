@@ -14,34 +14,24 @@
 int main(void)
 {
 
-	int a;
-	int b;
-	int c;
-	int index = 2;
-	int index2 = 1;
+	int i, j;
 
-	for (a = 0 ; a <= 7 ; a++)
+	for (i = 0; i <= 99; i++)
 	{
-		index = 2 + a;
-		index2 = 1 + a;
-		for (b = index2 ; b <= 8 ; b++)
+		for (j = i + 1; j <= 99; j++)
 		{
-			for (c = index ; c <= 9 ; c++)
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(j / 10 + '0');
+			putchar(j % 10 + '0');
+			if (i < 98)
 			{
-				putchar(a + '0');
-				putchar(b + '0');
-				putchar(c + '0');
-				if (a != 7)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
-			index++;
 		}
-		index2++;
 	}
-
 	putchar('\n');
 
 	return (0);
