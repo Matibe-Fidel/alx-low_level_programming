@@ -14,21 +14,20 @@
 int main(void)
 {
 	int a, b;
-	int index = 1;
 
-	for (a = '0'; a <= '8'; a++)
+	for (a = 0; a <= 8; a++)
 	{
-		for (b = index ; b <= 9 ; b++)
+		for (b = 1; b <= 9 ; b++)
 		{
-			putchar(a + '0');
-			putchar(b + '0');
-			if (a != 8)
+			if (a < b)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(a + '0');
+				putchar(b + '0');
+				if (a != 8 || b != 9)
+				{
+				}
 			}
 		}
-		index++;
 	}
 	putchar('\n');
 
