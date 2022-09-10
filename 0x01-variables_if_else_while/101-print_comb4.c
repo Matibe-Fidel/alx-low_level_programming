@@ -13,30 +13,35 @@
  */
 int main(void)
 {
-	int i, j, k;
 
-	for (i = 0; i <= 7; i++)
+	int a;
+	int b;
+	int c;
+	int index = 2;
+	int index2 = 1;
+
+	for (a = 0 ; a <= 7 ; a++)
 	{
-		for (j = 1; j <= 8; j++)
+		index = 2 + a;
+		index2 = 1 + a;
+		for (b = index2 ; b <= 8 ; b++)
 		{
-			if (i < j)
+			for (c = index ; c <= 9 ; c++)
 			{
-				for (k = 2; k <= 9; k++)
-				{
-					if (j < k)
-					{
-						putchar(i + '0');
-						putchar(j + '0');
-						putchar(k + '0');
-					if (i != 7 || j != 8 || k != 9)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					}
+				putchar(a + '0');
+				putchar(b + '0');
+				putchar(c + '0');
+				if (a != 7)
+				{	
+					putchar(',');
+					putchar(' ');
 				}
-			}
+			}	
+			index++;
 		}
+		index2++;
+	}
+
 	putchar('\n');
 
 	return (0);
