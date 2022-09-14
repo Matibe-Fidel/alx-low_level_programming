@@ -3,7 +3,7 @@
 
 
 /**
- * print last digit - main function
+ * print_last digit - main function
  *
  * @n: interger to get last sigit of
  * Return: last digit of
