@@ -17,7 +17,7 @@ int main(void)
 
 	printf("%d, %d", 1, 2);
 
-	for (i = 2 ; i < 98 ; i++)
+	for (i = 2 ; i =< 98 ; i++)
 	{
 		sum = one_back + two_back;
 		two_back = one_back;
