@@ -20,11 +20,11 @@ int main(void)
 	for (i = 2 ; i < 98 ; i++)
 	{
 		sum = one_back + two_back;
-
+		two_back = one_back;
 
 		printf(", %.0Lf", sum);
 
-		one_back = sum;
+		one_back = 1 + sum;
 	}
 	putchar('\n');
 
