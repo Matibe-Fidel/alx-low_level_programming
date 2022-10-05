@@ -9,26 +9,30 @@
  *
  * Return: pointer to the array (Success), NULL (Error)
  */
+
 char *create_array(unsigned int size, char c)
 {
-	char *p;
-	unsigned int i = 0;
+
+	unsigned int i;
+	char *p = NULL;
 
 	if (size == 0)
-		return (NULL);.
-	
-	p = (char *) malloc(sizeof(char) * size);
-
-	if (p == NULL)
-		return (0);
-
-	while (i < size)
 	{
-		*(p + i) = c;
-		i++;
+		return (NULL);
 	}
 
-	*(p + i) = '\0';
+	p = malloc(sizeof(char) * size);
+
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0 ; i < size ; i++)
+	{
+		*(p + i) = c;
+	}
 
 	return (p);
+
 }
