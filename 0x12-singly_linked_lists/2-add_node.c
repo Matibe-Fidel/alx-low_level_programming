@@ -1,53 +1,44 @@
-#include "lists.h"
 #include <string.h>
 #include <stdlib.h>
+#include "lists.h"
 
 /**
- * add_node - Adds a new node at the beginning
- * of a list_t list.
- * @head: A pointer to the head of the list_t list.
- * @str: The string to be added to the list_t list.
- *
- * Return: If the function fails - NULL.
- * Otherwise - the address of the new element.
- */
-list_t *add_node(list_t **head, const char *str)
+ * _strlen - Length of the passed string
+ * @s: String
+ * Return: Returns the length of a string
+ **/
+int _strlen(const char *s)
 {
-	list_t *temp;
+int i = 0;
 
-	if (head != NULL && str != NULL)
-	{
-		temp = malloc(sizeof(list_t));
-		if (temp == NULL)
-			return (NULL);
+while (*(s + i) != '\0')
+i++;
 
-		temp->str = strdup(str);
-		temp->len = _strlen(str);
-		temp->next = *head;
-
-		*head = temp;
-
-		return (temp);
-	}
-
-	return (0);
+return (i);
 }
 
 /**
- * _strlen - Returns the length of a string
- * @s: String to count
- *
- * Return: String length
+ * add_node - Prints length and the string, then returns amount of nodes
+ * @head: Pointer to a struct constant
+ * @str: haha ex di
+ * Return: Returns amount of node
  */
-int _strlen(const char *s)
+list_t *add_node(list_t **head, const char *str)
 {
-	int c = 0;
+	list_t *newNode;
 
-	while (*s)
+	newNode = malloc(sizeof(newNode));
+	if (newNode == NULL)
+	return (NULL);
+	if (str == NULL)
 	{
-		s++;
-		c++;
+	free(newNode);
+	return (NULL);
 	}
+	newNode->len = _strlen(str);
+	newNode->str = strdup(str);
+	newNode->next = *(head);
+	*head = newNode;
 
-	return (c);
+	return (newNode);
 }
