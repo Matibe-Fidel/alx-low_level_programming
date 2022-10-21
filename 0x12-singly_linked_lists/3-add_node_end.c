@@ -47,7 +47,7 @@ char *_strdup(const char *str)
 		}
 		else
 		{
-			for (i = 0; i < (leng + 1); i++
+			for (i = 0; i < (leng + 1); i++)
 			{
 				s[i] = str[i];
 			}
