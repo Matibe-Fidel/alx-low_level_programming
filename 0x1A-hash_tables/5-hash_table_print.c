@@ -21,7 +21,7 @@ void hash_chain_print(const hash_node_t *head)
 			printf("'%s': '%s'", head->key, head->value);
 		else
 			printf("'%s': %s", head->key, head->value);
-		
+
 		head = head->next;
 
 		if (head)
@@ -60,4 +60,3 @@ void hash_table_print(const hash_table_t *ht)
 		puts("}");
 	}
 }
-
